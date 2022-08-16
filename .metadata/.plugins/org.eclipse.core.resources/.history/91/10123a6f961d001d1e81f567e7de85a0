@@ -1,0 +1,11 @@
+package com.devsuperior.movieflix.dto;
+
+import com.devsuperior.movieflix.entities.Genre;
+
+public class GenreDTO {
+
+	public GenreDTO(Genre genre) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

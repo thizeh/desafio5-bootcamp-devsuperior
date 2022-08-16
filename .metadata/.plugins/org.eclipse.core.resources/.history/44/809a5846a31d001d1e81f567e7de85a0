@@ -1,0 +1,5 @@
+package com.devsuperior.movieflix.entities.pk;
+
+public class ReviewPK {
+
+}
