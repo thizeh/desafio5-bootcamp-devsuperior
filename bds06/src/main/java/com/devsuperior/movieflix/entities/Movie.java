@@ -26,29 +26,40 @@ public class Movie implements Serializable {
 	private String title;
 	private String subTitle;
 	private Integer year;
+	@Column(name = "img_Url")
 	private String imgUrl;
-	
 	@Column(columnDefinition = "TEXT")
 	private String synopsis;
-
-	@OneToMany(mappedBy = "movie")
-	private List<Review> reviews = new ArrayList<>();
 
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
 
+	@OneToMany
+	private List<Review> reviews = new ArrayList<>();
+
 	public Movie() {
 	}
 
 	public Movie(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis) {
-		super();
 		this.id = id;
 		this.title = title;
 		this.subTitle = subTitle;
 		this.year = year;
 		this.imgUrl = imgUrl;
 		this.synopsis = synopsis;
+	}
+
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setGenre(Genre genre) {
+		this.genre = genre;
+	}
+
+	public Genre getGenre() {
+		return genre;
 	}
 
 	public Long getId() {
@@ -97,18 +108,6 @@ public class Movie implements Serializable {
 
 	public void setSynopsis(String synopsis) {
 		this.synopsis = synopsis;
-	}
-
-	public List<Review> getReviews() {
-		return reviews;
-	}
-
-	public Genre getGenre() {
-		return genre;
-	}
-
-	public void setGenre(final Genre genre) {
-		this.genre = genre;
 	}
 
 	@Override

@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 @Table(name = "tb_genre")
 public class Genre implements Serializable {
@@ -25,14 +23,17 @@ public class Genre implements Serializable {
 	private String name;
 
 	@OneToMany(mappedBy = "genre")
-	@JsonIgnore
-	private final List<Movie> movies = new ArrayList<>();
+	private List<Movie> movies = new ArrayList<>();
 
 	public Genre() {
 	}
 
+	public List<Movie> getMovies() {
+		return movies;
+	}
+	
+
 	public Genre(Long id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -51,10 +52,6 @@ public class Genre implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public List<Movie> getMovies() {
-		return movies;
 	}
 
 	@Override

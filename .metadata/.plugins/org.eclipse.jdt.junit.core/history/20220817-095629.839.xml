@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="bds06" tests="20" started="20" failures="3" errors="0" ignored="0">
+  <testsuite name="com.devsuperior.movieflix.controllers.ReviewResourceIT" time="1.742" displayname="ReviewResourceIT" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.ReviewResourceIT]">
+    <testcase name="insertShouldInsertReviewWhenMemberAuthenticatedAndValidData" classname="com.devsuperior.movieflix.controllers.ReviewResourceIT" time="1.294" displayname="insertShouldInsertReviewWhenMemberAuthenticatedAndValidData()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.ReviewResourceIT]/[method:insertShouldInsertReviewWhenMemberAuthenticatedAndValidData()]"/>
+    <testcase name="insertShouldReturnForbiddenWhenVisitorAuthenticated" classname="com.devsuperior.movieflix.controllers.ReviewResourceIT" time="0.222" displayname="insertShouldReturnForbiddenWhenVisitorAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.ReviewResourceIT]/[method:insertShouldReturnForbiddenWhenVisitorAuthenticated()]">
+      <failure>java.lang.AssertionError: Status expected:&lt;403&gt; but was:&lt;201&gt;&#13;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)&#13;
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)&#13;
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:627)&#13;
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:196)&#13;
+	at com.devsuperior.movieflix.controllers.ReviewResourceIT.insertShouldReturnForbiddenWhenVisitorAuthenticated(ReviewResourceIT.java:85)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)&#13;
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:84)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="insertShouldReturnUnauthorizedWhenNotValidToken" classname="com.devsuperior.movieflix.controllers.ReviewResourceIT" time="0.018" displayname="insertShouldReturnUnauthorizedWhenNotValidToken()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.ReviewResourceIT]/[method:insertShouldReturnUnauthorizedWhenNotValidToken()]"/>
+    <testcase name="insertShouldReturnUnproccessableEntityWhenMemberAuthenticatedAndInvalidData" classname="com.devsuperior.movieflix.controllers.ReviewResourceIT" time="0.204" displayname="insertShouldReturnUnproccessableEntityWhenMemberAuthenticatedAndInvalidData()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.ReviewResourceIT]/[method:insertShouldReturnUnproccessableEntityWhenMemberAuthenticatedAndInvalidData()]"/>
+  </testsuite>
+  <testsuite name="com.devsuperior.movieflix.controllers.MovieControllerIT" time="1.281" displayname="MovieControllerIT" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]">
+    <testcase name="findByIdShouldReturnMovieWhenMemberAuthenticated" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.237" displayname="findByIdShouldReturnMovieWhenMemberAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByIdShouldReturnMovieWhenMemberAuthenticated()]"/>
+    <testcase name="findByGenreShouldReturnOrderedPageWhenVisitorAuthenticated" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.225" displayname="findByGenreShouldReturnOrderedPageWhenVisitorAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByGenreShouldReturnOrderedPageWhenVisitorAuthenticated()]">
+      <failure>java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;&#13;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)&#13;
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)&#13;
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:627)&#13;
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:196)&#13;
+	at com.devsuperior.movieflix.controllers.MovieControllerIT.findByGenreShouldReturnOrderedPageWhenVisitorAuthenticated(MovieControllerIT.java:137)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)&#13;
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:84)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="findByIdShouldReturnUnauthorizedWhenNoTokenGiven" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.01" displayname="findByIdShouldReturnUnauthorizedWhenNoTokenGiven()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByIdShouldReturnUnauthorizedWhenNoTokenGiven()]"/>
+    <testcase name="findByIdShouldReturnNotFoundWhenIdDoesNotExist" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.199" displayname="findByIdShouldReturnNotFoundWhenIdDoesNotExist()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByIdShouldReturnNotFoundWhenIdDoesNotExist()]"/>
+    <testcase name="findByGenreShouldReturnFilteredMoviesWhenGenreIsInformed" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.224" displayname="findByGenreShouldReturnFilteredMoviesWhenGenreIsInformed()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByGenreShouldReturnFilteredMoviesWhenGenreIsInformed()]"/>
+    <testcase name="findByIdShouldReturnMovieWhenUserVisitorAuthenticated" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.187" displayname="findByIdShouldReturnMovieWhenUserVisitorAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByIdShouldReturnMovieWhenUserVisitorAuthenticated()]"/>
+    <testcase name="findByGenreShouldReturnOrderedPageWhenMemberAuthenticated" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.185" displayname="findByGenreShouldReturnOrderedPageWhenMemberAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByGenreShouldReturnOrderedPageWhenMemberAuthenticated()]">
+      <failure>java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;400&gt;&#13;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)&#13;
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)&#13;
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:627)&#13;
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:196)&#13;
+	at com.devsuperior.movieflix.controllers.MovieControllerIT.findByGenreShouldReturnOrderedPageWhenMemberAuthenticated(MovieControllerIT.java:161)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)&#13;
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)&#13;
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)&#13;
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)&#13;
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)&#13;
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)&#13;
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:84)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="findByGenreShouldReturnUnauthorizedWhenNoTokenGiven" classname="com.devsuperior.movieflix.controllers.MovieControllerIT" time="0.006" displayname="findByGenreShouldReturnUnauthorizedWhenNoTokenGiven()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.MovieControllerIT]/[method:findByGenreShouldReturnUnauthorizedWhenNoTokenGiven()]"/>
+  </testsuite>
+  <testsuite name="com.devsuperior.movieflix.controllers.GenreControllerIT" time="0.433" displayname="GenreControllerIT" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]">
+    <testcase name="findAllShouldReturnAllGenresWhenMemberAuthenticated" classname="com.devsuperior.movieflix.controllers.GenreControllerIT" time="0.219" displayname="findAllShouldReturnAllGenresWhenMemberAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]/[method:findAllShouldReturnAllGenresWhenMemberAuthenticated()]"/>
+    <testcase name="findAllShouldReturnUnauthorizedWhenNotValidToken" classname="com.devsuperior.movieflix.controllers.GenreControllerIT" time="0.007" displayname="findAllShouldReturnUnauthorizedWhenNotValidToken()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]/[method:findAllShouldReturnUnauthorizedWhenNotValidToken()]"/>
+    <testcase name="findAllShouldReturnAllGenresWhenVisitorAuthenticated" classname="com.devsuperior.movieflix.controllers.GenreControllerIT" time="0.205" displayname="findAllShouldReturnAllGenresWhenVisitorAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]/[method:findAllShouldReturnAllGenresWhenVisitorAuthenticated()]"/>
+  </testsuite>
+  <testsuite name="com.devsuperior.movieflix.entities.ReviewTests" time="0.007" displayname="ReviewTests" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.ReviewTests]">
+    <testcase name="reviewShouldHaveCorrectStructure" classname="com.devsuperior.movieflix.entities.ReviewTests" time="0.007" displayname="reviewShouldHaveCorrectStructure()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.ReviewTests]/[method:reviewShouldHaveCorrectStructure()]"/>
+  </testsuite>
+  <testsuite name="com.devsuperior.movieflix.entities.GenreTests" time="0.001" displayname="GenreTests" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.GenreTests]">
+    <testcase name="genreShouldHaveCorrectStructure" classname="com.devsuperior.movieflix.entities.GenreTests" time="0.001" displayname="genreShouldHaveCorrectStructure()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.GenreTests]/[method:genreShouldHaveCorrectStructure()]"/>
+  </testsuite>
+  <testsuite name="com.devsuperior.movieflix.entities.MovieTests" time="0.001" displayname="MovieTests" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.MovieTests]">
+    <testcase name="movieShouldHaveCorrectStructure" classname="com.devsuperior.movieflix.entities.MovieTests" time="0.001" displayname="movieShouldHaveCorrectStructure()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.MovieTests]/[method:movieShouldHaveCorrectStructure()]"/>
+  </testsuite>
+  <testsuite name="com.devsuperior.movieflix.entities.RoleTests" time="0.001" displayname="RoleTests" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.RoleTests]">
+    <testcase name="roleShouldHaveCorrectStructure" classname="com.devsuperior.movieflix.entities.RoleTests" time="0.001" displayname="roleShouldHaveCorrectStructure()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.RoleTests]/[method:roleShouldHaveCorrectStructure()]"/>
+  </testsuite>
+  <testsuite name="com.devsuperior.movieflix.entities.UserTests" time="0.0" displayname="UserTests" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.UserTests]">
+    <testcase name="userShouldHaveCorrectStructure" classname="com.devsuperior.movieflix.entities.UserTests" time="0.0" displayname="userShouldHaveCorrectStructure()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.entities.UserTests]/[method:userShouldHaveCorrectStructure()]"/>
+  </testsuite>
+</testrun>

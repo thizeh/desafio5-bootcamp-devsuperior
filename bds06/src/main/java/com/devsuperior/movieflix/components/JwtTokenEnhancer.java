@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.components;
+	package com.devsuperior.movieflix.components;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,11 +25,11 @@ public class JwtTokenEnhancer implements TokenEnhancer {
 		
 		Map<String, Object> map = new HashMap<>();
 		map.put("userId", user.getId());
-		map.put("user", user.getName());;
+		
 		
 		DefaultOAuth2AccessToken token = (DefaultOAuth2AccessToken) accessToken;
 		token.setAdditionalInformation(map);
 		
-		return accessToken;
+		return token;
 	}
 }

@@ -1,18 +1,13 @@
 package com.devsuperior.movieflix.dto;
 
-import java.io.Serializable;
 import java.util.Objects;
 
 import com.devsuperior.movieflix.entities.Genre;
 
-public class GenreDTO implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class GenreDTO {
 
 	private Long id;
 	private String name;
-
-	public GenreDTO() {
-	}
 
 	public GenreDTO(Long id, String name) {
 		this.id = id;
@@ -40,14 +35,21 @@ public class GenreDTO implements Serializable {
 		this.name = name;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
 	}
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(id, name);
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GenreDTO other = (GenreDTO) obj;
+		return Objects.equals(id, other.id);
 	}
 
-	
 }

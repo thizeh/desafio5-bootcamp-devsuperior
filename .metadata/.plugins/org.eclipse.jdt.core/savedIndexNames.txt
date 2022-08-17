@@ -35,7 +35,6 @@ INDEX VERSION 1.131+D:\Bootcamp-Spring-DevSuperior-desafios\desafioMovieFlix2\.m
 1748374594.index
 3982477572.index
 1015661326.index
-3681769525.index
 1621683458.index
 843324869.index
 2533176943.index

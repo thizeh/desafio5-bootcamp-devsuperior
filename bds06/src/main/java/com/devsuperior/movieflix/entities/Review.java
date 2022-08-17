@@ -22,22 +22,36 @@ public class Review implements Serializable {
 	private String text;
 
 	@ManyToOne
-	@JoinColumn(name = "user_id")
-	private User user;
-
-	@ManyToOne
 	@JoinColumn(name = "movie_id")
 	private Movie movie;
+
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
 
 	public Review() {
 	}
 
-	public Review(Long id,Movie movie,  String text, User user) {
+	public Review(Long id, String text) {
+		super();
 		this.id = id;
-		this.user = user;
-		this.movie = movie;
 		this.text = text;
+	}
 
+	public void setMovie(Movie movie) {
+		this.movie = movie;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Movie getMovie() {
+		return movie;
+	}
+
+	public User getUser() {
+		return user;
 	}
 
 	public Long getId() {
@@ -56,22 +70,6 @@ public class Review implements Serializable {
 		this.text = text;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-	public Movie getMovie() {
-		return movie;
-	}
-
-	public void setMovie(Movie movie) {
-		this.movie = movie;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -88,4 +86,5 @@ public class Review implements Serializable {
 		Review other = (Review) obj;
 		return Objects.equals(id, other.id);
 	}
+
 }

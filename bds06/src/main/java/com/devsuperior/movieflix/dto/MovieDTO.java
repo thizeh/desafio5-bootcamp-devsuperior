@@ -1,30 +1,24 @@
 package com.devsuperior.movieflix.dto;
 
-import java.io.Serializable;
+import java.util.Objects;
 
-import com.devsuperior.movieflix.entities.Genre;
 import com.devsuperior.movieflix.entities.Movie;
 
-public class MovieDTO implements Serializable {
-	private static final long serialVersionUID = 1L;
-	
+public class MovieDTO {
+
 	private Long id;
 	private String title;
 	private String subTitle;
 	private Integer year;
 	private String imgUrl;
 	private String synopsis;
-	private Genre genre;
-	
+	private GenreDTO genre;
+
 	public MovieDTO() {
-		
-	}
-	
-	public MovieDTO(Long id) {
-		
 	}
 
-	public MovieDTO(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis, Genre genre) {
+	public MovieDTO(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis,
+			GenreDTO genre) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -34,7 +28,7 @@ public class MovieDTO implements Serializable {
 		this.synopsis = synopsis;
 		this.genre = genre;
 	}
-	
+
 	public MovieDTO(Movie entity) {
 		id = entity.getId();
 		title = entity.getTitle();
@@ -42,11 +36,8 @@ public class MovieDTO implements Serializable {
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		synopsis = entity.getSynopsis();
-		genre = entity.getGenre();
-		
+		genre = new GenreDTO(entity.getGenre());
 	}
-	
-	
 
 	public Long getId() {
 		return id;
@@ -96,13 +87,29 @@ public class MovieDTO implements Serializable {
 		this.synopsis = synopsis;
 	}
 
-	public Genre getGenre() {
+	public GenreDTO getGenre() {
 		return genre;
 	}
 
-	public void setGenre(Genre genre) {
-		this.genre = genre;
+	public void setGenreId(GenreDTO genreId) {
+		this.genre = genreId;
 	}
 
-	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MovieDTO other = (MovieDTO) obj;
+		return Objects.equals(id, other.id);
+	}
+
 }

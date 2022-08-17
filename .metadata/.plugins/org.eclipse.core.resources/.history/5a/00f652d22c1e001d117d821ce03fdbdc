@@ -1,0 +1,50 @@
+package com.devsuperior.movieflix.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.devsuperior.movieflix.dto.ReviewDTO;
+import com.devsuperior.movieflix.entities.Movie;
+import com.devsuperior.movieflix.entities.Review;
+import com.devsuperior.movieflix.entities.User;
+import com.devsuperior.movieflix.repositories.MovieRepository;
+import com.devsuperior.movieflix.repositories.ReviewRepository;
+
+@Service
+public class ReviewService {
+
+	@Autowired
+	private ReviewRepository repository;
+	
+	@Autowired
+	private MovieRepository movieRepository;
+	
+	@Autowired
+	private UserAuthService userAuthService;
+	
+	@Transactional(readOnly = true)
+	Page<ReviewDTO> notificationsForCurrentUser(Pageable pageable){
+		User user = userAuthService.authenticated();
+		Page<Review> page = repository.findByUser(user, pageable);
+		return page.map(x -> new ReviewDTO(x));
+		
+	}
+	
+	@Transactional
+	public ReviewDTO insert(ReviewDTO dto) {
+		Movie movie = movieRepository.getOne(dto.getMovieId());
+		User user = userAuthService.authenticated();
+		userAuthService.validateSelfOrMember(user.getId());
+		Review entity = new Review();
+		entity.setText(dto.getText());
+		entity.setMovie(movie);
+		entity.setUser(user);
+		entity = repository.save(entity);
+		return new ReviewDTO(entity);
+		
+	}
+	
+}
