@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GenreControllerIT" project="bds06" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.devsuperior.movieflix.controllers.GenreControllerIT" time="1.46" displayname="GenreControllerIT" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]">
+    <testcase name="findAllShouldReturnAllGenresWhenMemberAuthenticated" classname="com.devsuperior.movieflix.controllers.GenreControllerIT" time="1.218" displayname="findAllShouldReturnAllGenresWhenMemberAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]/[method:findAllShouldReturnAllGenresWhenMemberAuthenticated()]"/>
+    <testcase name="findAllShouldReturnUnauthorizedWhenNotValidToken" classname="com.devsuperior.movieflix.controllers.GenreControllerIT" time="0.026" displayname="findAllShouldReturnUnauthorizedWhenNotValidToken()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]/[method:findAllShouldReturnUnauthorizedWhenNotValidToken()]"/>
+    <testcase name="findAllShouldReturnAllGenresWhenVisitorAuthenticated" classname="com.devsuperior.movieflix.controllers.GenreControllerIT" time="0.214" displayname="findAllShouldReturnAllGenresWhenVisitorAuthenticated()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.movieflix.controllers.GenreControllerIT]/[method:findAllShouldReturnAllGenresWhenVisitorAuthenticated()]"/>
+  </testsuite>
+</testrun>

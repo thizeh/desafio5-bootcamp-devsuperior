@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.services;
+	package com.devsuperior.movieflix.services;
 
 import java.util.Optional;
 
@@ -30,11 +30,17 @@ public class UserService implements UserDetailsService {
 	@Transactional(readOnly = true)
 	public UserDTO show(Long id) {
 
-		userAuthService.validateSelfOrAdmin(id);
+		userAuthService.validateSelfOrMember(id);
 		Optional<User> userId = userRepository.findById(id);
 		User user = userId.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		return new UserDTO(user);
 
+	}
+	
+	@Transactional(readOnly = true)
+	public UserDTO getProfile() {
+		User user = userAuthService.authenticated();
+		return new UserDTO(user.getId(), user.getName(), user.getEmail());		
 	}
 
 	@Override

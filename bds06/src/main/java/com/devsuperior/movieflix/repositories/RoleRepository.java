@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.repositories;
+	package com.devsuperior.movieflix.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

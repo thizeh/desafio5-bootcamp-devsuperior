@@ -14,15 +14,15 @@ import com.devsuperior.movieflix.services.UserService;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResource	 implements Serializable {
-  private static final long serialVersionUID = 1L;
+public class UserResource implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-  @Autowired
-  private UserService userService;
+	@Autowired
+	private UserService userService;
 
-  @GetMapping(value = "/{id}")
-  public ResponseEntity<UserDTO> show(@PathVariable Long id) {
-    UserDTO userDTO = userService.show(id);
-    return ResponseEntity.ok().body(userDTO);
-  }
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<UserDTO> show(@PathVariable Long id) {
+		UserDTO userDTO = userService.show(id);
+		return ResponseEntity.ok().body(userDTO);
+	}
 }
